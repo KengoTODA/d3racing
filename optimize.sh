@@ -12,7 +12,7 @@ rm -rf build/.git
 # remove unnecessary javascript files
 for FILE in `ls build/*.js`
 do
-  if [ $FILE != 'build/game.js' ]; then
+  if [ $FILE != 'build/game.js' -a $FILE != 'build/require.js' ]; then
     rm $FILE
   fi
 done
